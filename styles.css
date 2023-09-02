@@ -1,0 +1,41 @@
+/* Color Palette */
+/* color {
+    color: #020659;
+    color: #020873;
+    color: #030abc;
+    color: #0d8dfb;
+    color: #2104D9;
+    color: #2699FB;
+    color: #590242;
+} */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: #020659; 
+}
+body {
+    margin:auto 100px;
+    width: auto;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+header {
+    background-color: #020873;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li  {
+    display: grid;   
+}
+section {
+
+}
+h1 {
+
+}
