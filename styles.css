@@ -1,82 +1,51 @@
-/* Color Palette */
-/* color {
-    color: #020659;
-    color: #020873;
-    color: #030abc;
-    color: #0d8dfb;
-    color: #2104D9;
-    color: #2699FB;
-    color: #590242;
-} */
-* {
+*{
     box-sizing: border-box;
-    margin: 0;
 }
-
-html {
+html{
     background-color: #020659;
-    margin: auto 10%;
+}
+body{
+    margin: 0 auto;
+    background-color: #ffffff;
+    
+}
+header{
+
 }
 
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #ffffff;
-}
+main{
 
-h1 {
-    font-size: 22px;
-    color: #ffffff;
 }
-
-h1,
-h2,
-h3 {
-    font-weight: bold;
-    line-height: 2em;
-}
-
-h2,
-h3 {
-    font-size: 20px;
-    color: #590242;
-    line-height: 2em;
-}
-
+/* Scroll???? */
 .scroll {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5,1fr);
     overflow-x: auto;
     overflow-y: hidden;
 }
-
 .scroll section {
     margin: 10px;
     position: relative;
 }
-
 .scroll div {
     position: absolute;
     top: 251px;
-    background-color: rgba(255, 255, 255, .75);
+    background-color: rgba(255, 255, 255,.75);
     padding: 5px;
     height: 50px;
     width: 350px;
 }
-
 dl {
     display: flex;
 }
-
 dt {
     padding-right: 5px;
 }
-
 audio {
     position: absolute;
     bottom: 150px;
     left: 5px;
 }
-
 .more {
     text-decoration: none;
     background-color: #590242;
@@ -88,99 +57,13 @@ audio {
     text-align: center;
     margin: 10px 0 30px 32px;
 }
-
-.more:hover {
-    background-color: #020659;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* WHAT A MESS DOWN THERE */
-
-
-/* main{
-    display: block;
-}
-header {
-    background-color: #020873;
-    color: white;
-}
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-li  {
-    display: grid;   
-}
-.smoothJazz{
-    margin: auto;
-    background-image: linear-gradient(to right, #2104D9, #020659); 
-    color: #ffffff;
-}
-h3 {
-    width: 100%;
-    background-color: white;
-    color: #590242;
-    display: inline-block;
-}
-/* Trending */
-/* #trending {
-    display: grid;
-    grid-template-columns: repeat(5 ,1fr);
-}
-#aloma, #myRoad, #Papaya, #smoothies, #sucPreform {
-    margin: 10px;
-    padding: 1fr;
-}
-/* Your Playlists */
-/* #playlists{
-    display: grid;
-    grid-template-columns: repeat(5 ,1fr);
-    justify-content: space-around;
-    background-color: #0d8dfb;
-}
-#best2020, #pumpSpice, #quietStorm, #smoothJazz, #smoothStudy {
-    margin: 30px;
-    background-color: #2699fb;
-} */
-
-
-/* Curated */
-
-/* #curated {
-    display: grid;
-    grid-template-columns: repeat(5 ,1fr);
-    background-color: #030abc;
-    color: white;
-}
-#boozyBrunch, #dinnerParty, #mellow, #jazzChill, #jazzSax {
-    margin: 10px;
-    background-color: #020873;
-} */
-
-/* footer */
-
-/* footer{
-    background-color: white;
-    color: #590242;
-} */
-
 /* Provided Code */
-
-/* ul {
+ul {
     overflow: hidden;
     max-height: 0;
     transition: max-height .2s ease-out;
 }
+
 label {
     cursor: pointer;
     display: inline-block;
@@ -188,6 +71,7 @@ label {
     position: relative;
     user-select: none;
 }
+
 label span {
     background-color: #ffffff;
     display: block;
@@ -196,7 +80,9 @@ label span {
     transition: background-color .2s ease-out;
     width: 18px;
 }
-label span:before, label span:after {
+
+label span:before,
+label span:after {
     background: #ffffff;
     content: '';
     display: block;
@@ -205,41 +91,36 @@ label span:before, label span:after {
     transition: all .2s ease-out;
     width: 100%;
 }
+
 label span:before {
     top: 5px;
 }
+
 label span:after {
     top: -5px;
 }
+
 input {
     display: none;
 }
-input:checked ~ ul {
+
+input:checked~ul {
     max-height: 500px;
 }
-input:checked ~ label span {
+
+input:checked~label span {
     background: transparent;
 }
-input:checked ~ label span:before {
+
+input:checked~label span:before {
     transform: rotate(-45deg);
 }
-input:checked ~ label span:after {
+
+input:checked~label span:after {
     transform: rotate(45deg);
 }
-input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+
+input:checked~label:not(.steps) span:before,
+input:checked~label:not(.steps) span:after {
     top: 0;
 }
-
-@media screen and (min-width:834px) {
-    ul {
-        overflow: visible;
-        position: absolute;
-        top: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-    label span, input {
-        display: none;
-    }
-}
-*/
