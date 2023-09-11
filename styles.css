@@ -1,51 +1,275 @@
-*{
-    box-sizing: border-box;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-html{
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* CSS Reset */
+
+/* Start of custom CSS */
+html {
     background-color: #020659;
 }
-body{
+
+body {
+    max-width: 80%;
+    min-width: 375px;
     margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #ffffff;
+}
+header {
+    padding: 20px;
+    background: linear-gradient(to right,#2104D9,#030A8C);
+    color: #ffffff;
+} 
+nav{
+    background: #020873;
+}
+h1 {
+    padding: 10px 20px;
+    font-size: 1.25em;
+}
+h2,h3{
+    font-weight: bold;
+    padding-left: 1em;
+    font-size: 1em;
+}
+h3{
+
+}
+p, dl, dd {
+    font-size: 1em;
+}
+.playlists, .curated{
+    display: grid;
+}
+.playlists .scroll1 {
+    background: #2699fb;
+}
+.scroll1{
+    width: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
     
 }
-header{
-
+.scroll1 section div {
+    display: grid;
+    padding: 10px;
+    margin: 10px 10px;
+    height: 250px;
+    background: #0D8DFB;
+    color: #ffffff;    
+}
+.scroll1 img,h2,p{
+    
+}
+footer p {
+    font-size: .75em;
 }
 
-main{
+ /* Mobile First */
+ @media screen and (min-width:375px) {
+    nav{
+        
+    }
+    nav>h2 {
+        
+    }
+    ul {
+        overflow: visible; 
+        top: 0;
+        padding-left: 1rem;
+        
+    }
+    li {
+        padding: 5px;
+    }
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
 
+    label span, input {
+        display: none;
+    } 
 }
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+}
+
 /* Scroll???? */
 .scroll {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     overflow-x: auto;
     overflow-y: hidden;
 }
+
 .scroll section {
     margin: 10px;
     position: relative;
 }
+
 .scroll div {
     position: absolute;
     top: 251px;
-    background-color: rgba(255, 255, 255,.75);
+    background-color: rgba(255, 255, 255, .75);
     padding: 5px;
     height: 50px;
     width: 350px;
 }
+
 dl {
     display: flex;
 }
+
 dt {
     padding-right: 5px;
 }
+
 audio {
     position: absolute;
     bottom: 150px;
     left: 5px;
 }
+
 .more {
     text-decoration: none;
     background-color: #590242;
@@ -57,7 +281,9 @@ audio {
     text-align: center;
     margin: 10px 0 30px 32px;
 }
+
 /* Provided Code */
+
 ul {
     overflow: hidden;
     max-height: 0;
