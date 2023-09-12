@@ -1,84 +1,4 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -88,17 +8,7 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     display: block;
 }
 
@@ -144,35 +54,71 @@ body {
     background-color: #ffffff;
 }
 header {
-    padding: 20px;
+    padding: 60px 25px 25px 25px;
     background: linear-gradient(to right,#2104D9,#030A8C);
     color: #ffffff;
 } 
 nav{
+    width: 80%;
+    position: absolute;
+    top: 0;
     background: #020873;
+}
+nav h2{
+    display: none;
+}
+
+ul{
+    display: block;
+    text-decoration: none;
+    list-style-type: none;
+}
+li a{
+    display: block;
+    background: red;
+    padding: 10px;
 }
 h1 {
     padding: 10px 20px;
     font-size: 1.25em;
 }
-h2,h3{
+h1, h2, h3{
     font-weight: bold;
-    padding-left: 1em;
-    font-size: 1em;
+    text-transform: uppercase;
 }
-h3{
-
+h2,h3{
+    padding-left: 10px;
+    color: #590242;
+    font-size: 1em;
 }
 p, dl, dd {
     font-size: 1em;
 }
-.playlists, .curated{
-    display: grid;
+dl{
+    margin-top: 10px;
+    padding-left: 10px;
+    color: #590242;
 }
-.playlists .scroll1 {
+dt {
+    font-style: italic;
+}
+#trending {
+    padding-top: 30px;
+}
+
+#playlists .scroll1 {
     background: #2699fb;
 }
-.scroll1{
+#playlists .scroll1 div {
+    background: #0D8DFB;
+}
+#curated .scroll1{
+    background: #020659;
+}
+#curated .scroll1 div{
+    background: #030A8C;
+}
+.scroll1 {
     width: auto;
     overflow-x: auto;
     overflow-y: hidden;
@@ -180,59 +126,70 @@ p, dl, dd {
     grid-template-columns: repeat(5,1fr);
     
 }
-.scroll1 section div {
+.scroll1 div {
     display: grid;
     padding: 10px;
     margin: 10px 10px;
     height: 250px;
-    background: #0D8DFB;
-    color: #ffffff;    
+    color: #ffffff; 
+    text-align: center;
+    line-height: 1.2;  
 }
-.scroll1 img,h2,p{
-    
-}
+
 footer p {
     font-size: .75em;
 }
 
  /* Mobile First */
- @media screen and (min-width:375px) {
-    nav{
-        
+ /* @media screen and (min-width:375px) {
+    header{
+        display: block;
+        flex-wrap: wrap;
+        margin-top: 50px;
     }
-    nav>h2 {
-        
-    }
-    ul {
-        overflow: visible; 
-        top: 0;
-        padding-left: 1rem;
-        
-    }
-    li {
-        padding: 5px;
-    }
-    a {
+    nav a{
         text-decoration: none;
-        color: #ffffff;
+        display: block;
     }
-
-    label span, input {
-        display: none;
-    } 
-}
-@media screen and (min-width:834px) {
-    ul {
+    
+    /* ul {
         overflow: visible;
         position: absolute;
         top: 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    } 
+    .nav li {
+        display: grid;
+    }
+    a {
+        color: #ffffff;
+    }
+
+    label span, input {
+        position: absolute;
+        top: 0;
+        display: none;
+    } 
+
+}*/
+/* @media screen and (min-width:834px) {
+    
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        background: red;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
     label span, input {
         display: none;
     }
-}
+    section a{
+        
+    }
+} */
 
 /* Scroll???? */
 .scroll {
@@ -349,4 +306,31 @@ input:checked~label span:after {
 input:checked~label:not(.steps) span:before,
 input:checked~label:not(.steps) span:after {
     top: 0;
+}
+/* Scroll color */
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
 }
