@@ -1,4 +1,84 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -8,7 +88,17 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 /* HTML5 display-role reset for older browsers */
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
@@ -55,144 +145,152 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #ffffff;
 }
+
+/* Header and Nav */
+
 header {
     padding: 60px 25px 25px 25px;
-    background: linear-gradient(to right,#2104D9,#030A8C);
+    background: linear-gradient(to right, #2104D9, #030A8C);
     color: #ffffff;
-} 
-nav{
+    margin-top: 10px;
+}
+
+nav {
     width: 80%;
+    height: 60px;
     position: absolute;
     top: 0;
     background: #020873;
+    z-index: 3;
 }
-nav h2{
+
+nav h2 {
     display: none;
 }
 
-ul{
+a[href="#home"] {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+nav ul li a {
+    height: 30px;
+    background-color: #020873;
+    display: block;
+    color: #ffffff;
+}
+
+ul {
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    border-color: #ffffff;
+
+    text-align: center;
     display: block;
     text-decoration: none;
     list-style-type: none;
 }
-li a{
+
+label span,
+input {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    /* display: none; */
+}
+
+li a {
     display: block;
     padding: 10px;
+    text-decoration: none;
+    z-index: 3;
 }
+
+/* Headings, P, DT,DL */
 h1 {
     padding: 10px 20px;
     font-size: 1.25em;
 }
-h1, h2, h3{
+
+h1,
+h2,
+h3 {
     font-weight: bold;
     text-transform: uppercase;
 }
-h2,h3{
+
+h2,
+h3 {
     padding-left: 10px;
     color: #590242;
     font-size: 1em;
 }
-p, dl, dd {
+
+p,
+dl,
+dd {
     font-size: 1em;
 }
-dl{
+
+dl {
     margin-top: 10px;
     padding-left: 10px;
     color: #590242;
 }
+
 dt {
     font-style: italic;
 }
+
+/* Selectors */
+
 #trending {
     padding-top: 30px;
+}
+
+/* playlists */
+#playlists h3 {
+    color: #590242;
+    padding: 10px;
+}
+#playlists div h3 {
+    color: #ffffff;
 }
 
 #playlists .scroll1 {
     background: #2699fb;
 }
+
 #playlists .scroll1 div {
+    align-items: center;
     background: #0D8DFB;
 }
-#curated .scroll1{
+
+/* curated */
+#curated h3{
+    color: #590242;
+    padding: 10px;
+}
+#curated div h3 {
+    color: #ffffff;
+}
+
+#curated .scroll1 {
+    margin: auto;
     background: #020659;
 }
-#curated .scroll1 div{
+
+#curated .scroll1 div {
+    align-items: center;
     background: #030A8C;
-}
-.scroll1 {
-    width: auto;
-    overflow-x: auto;
-    overflow-y: hidden;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    
-}
-.scroll1 div {
-    display: grid;
-    padding: 10px;
-    margin: 10px 10px;
-    height: 250px;
-    color: #ffffff; 
-    text-align: center;  
 }
 
 footer p {
     font-size: .75em;
 }
-
- /* Mobile First */
- @media screen and (min-width:375px) {
-    header{
-        margin-top: 10px;
-    }
-    nav{
-        width: 80%;
-        display: grid;
-        z-index: 3;
-        grid-template-columns: repeat(3,33%);
-    }
-
-    a[href="home"]{
-        font-weight: bold;
-    }
-    nav ul li a{
-    
-    }
-    ul {
-        overflow: visible;
-        position: relative;
-        width: 100%;
-        z-index: 3;
-        border-color: #ffffff;
-        margin-top: 10px;
-        text-align: center;
-        grid-column: 2/3;
-        grid-row: 1;
-    } 
-    label span, input {
-        position: absolute;
-        width: 50%;
-        top: 0;
-        display: none;
-        grid-column: 1/2;
-        grid-row: 1;
-    } 
-
-}
-/* @media screen and (min-width:834px) {
-    
-    ul {
-        overflow: visible;
-        position: absolute;
-        top: 0;
-        display: grid;
-        background: red;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-    label span, input {
-        display: none;
-    }
-} */
 
 /* Scroll???? */
 .scroll {
@@ -214,6 +312,22 @@ footer p {
     padding: 5px;
     height: 50px;
     width: 350px;
+}
+.scroll1 {
+    
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.scroll1 div {
+    display: grid;
+    padding: 10px;
+    margin: 10px 10px;
+    height: 250px;
+    color: #ffffff;
+    text-align: center;
 }
 
 dl {
@@ -310,44 +424,119 @@ input:checked~label:not(.steps) span:before,
 input:checked~label:not(.steps) span:after {
     top: 0;
 }
+
 /* Scroll color */
 #trending ::-webkit-scrollbar {
     width: 15px;
 }
+
 #trending ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 15px #590242;
 }
+
 #trending ::-webkit-scrollbar-thumb {
     background: #590242;
     border-radius: 5px;
 }
+
 #trending ::-webkit-scrollbar-thumb:hover {
     background: #020659;
 }
-#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+
+#playlists ::-webkit-scrollbar,
+#curated ::-webkit-scrollbar {
     width: 15px;
 }
-#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
-    box-shadow: inset 0 0 15px #020659
+
+#playlists ::-webkit-scrollbar-track,
+#curated ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #020659;
 }
-#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
-    background: #020659;
+
+#playlists ::-webkit-scrollbar-thumb,
+#curated ::-webkit-scrollbar-thumb {
+    background: #2104D9;
     border-radius: 5px;
 }
-#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+
+#playlists ::-webkit-scrollbar-thumb:hover,
+#curated ::-webkit-scrollbar-thumb:hover {
     background: #ffffff;
 }
 
-/* ul {  questionable
+/* Media Query */
+
+@media screen and (min-width:834px) {
+    nav {
+        display: block;
+    }
+
+    nav ul li a {
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+
+    ul {
         overflow: visible;
         position: absolute;
-        left: 25%;
-        width: 100%;
-        border-color: #ffffff;
-        margin-top: 10px;
-        top: 10;
-        text-align: center;
-        z-index: 3;
+        top: 0;
         display: grid;
-        grid-template-columns: 50%;
-    }  */
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    label span,
+    input {
+        display: none;
+    }
+
+    .scroll1 {
+        height: 500px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(310px,1fr));
+
+    }
+
+    #playlists {
+        width: 50%;
+        float: left;
+    }
+
+    #curated {
+        width: 50%;
+        float: right;
+    }
+
+    .scroll1 section {
+        width: inherit;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .scroll1 img {
+        padding-right: 10px;
+        grid-column: 1;
+        grid-row: 2/4;
+        align-items: center;
+    }
+
+    .scroll1 h3 {
+        grid-column: 2;
+        grid-row: 2/3;
+    }
+
+    .scroll1 p {
+        grid-column: 2;
+        grid-row: 3/4;
+    }
+
+    .scroll1 div {
+        height: auto;
+    }
+
+    .more {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+}
