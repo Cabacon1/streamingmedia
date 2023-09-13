@@ -59,16 +59,49 @@ header {
     padding: 60px 25px 25px 25px;
     background: linear-gradient(to right,#2104D9,#030A8C);
     color: #ffffff;
-} 
+    margin-top: 10px;
+}
+
 nav{
     width: 80%;
+    height: 55px;
+    display: grid;
     position: absolute;
     top: 0;
     background: #020873;
+    z-index: 3;
+    grid-template-columns: repeat(3,33%);
 }
 nav h2{
     display: none;
 }
+
+a[href="#home"]{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul {
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    border-color: #ffffff;
+    margin-top: 10px;
+    text-align: center;
+    display: subgrid;
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+label span, input {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    display: none;
+    grid-column: 1/2;
+    grid-row: 1;
+} 
 
 ul{
     display: block;
@@ -78,6 +111,7 @@ ul{
 li a{
     display: block;
     padding: 10px;
+    text-decoration: none;
 }
 h1 {
     padding: 10px 20px;
@@ -139,60 +173,6 @@ dt {
 footer p {
     font-size: .75em;
 }
-
- /* Mobile First */
- @media screen and (min-width:375px) {
-    header{
-        margin-top: 10px;
-    }
-    nav{
-        width: 80%;
-        display: grid;
-        z-index: 3;
-        grid-template-columns: repeat(3,33%);
-    }
-
-    a[href="home"]{
-        font-weight: bold;
-    }
-    nav ul li a{
-    
-    }
-    ul {
-        overflow: visible;
-        position: relative;
-        width: 100%;
-        z-index: 3;
-        border-color: #ffffff;
-        margin-top: 10px;
-        text-align: center;
-        grid-column: 2/3;
-        grid-row: 1;
-    } 
-    label span, input {
-        position: absolute;
-        width: 50%;
-        top: 0;
-        display: none;
-        grid-column: 1/2;
-        grid-row: 1;
-    } 
-
-}
-/* @media screen and (min-width:834px) {
-    
-    ul {
-        overflow: visible;
-        position: absolute;
-        top: 0;
-        display: grid;
-        background: red;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-    label span, input {
-        display: none;
-    }
-} */
 
 /* Scroll???? */
 .scroll {
@@ -337,7 +317,60 @@ input:checked~label:not(.steps) span:after {
 #playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
     background: #ffffff;
 }
-
+@media screen and (min-width:834px) {
+    nav{
+        display: block;
+    }
+    nav ul li a{
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+    
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+    .scroll1 div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .scroll1 img{
+        padding-right: 10px;
+        grid-column: 1;
+        grid-row: 2/4;
+        align-items: center;
+    }
+    .scroll1 h3{
+        grid-column: 2;
+        grid-row: 2/3;
+    }
+    .scroll1 p{
+        grid-column: 2;
+        grid-row: 3/4;
+    }
+    
+    .scroll2 img{
+        grid-column: 1;
+        grid-row: 2/4;
+        align-items: center;
+    }
+    .scroll2 h3{
+        grid-column: 2;
+        grid-row: 2/3;
+    }
+    .scroll2 p{
+        grid-column: 2;
+        grid-row: 3/4;
+    }
+    
+}
 /* ul {  questionable
         overflow: visible;
         position: absolute;
